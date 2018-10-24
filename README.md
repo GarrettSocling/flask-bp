@@ -18,7 +18,7 @@ Run the flask-bp:
 python run.py
 ```
 
-##Open Source Resources Used
+## Open Source Resources Used
 1. [Python 3.7](https://www.python.org/downloads/release/python-370/)
 2. [Flask 1.0.2](https://github.com/pallets/flask)
 3. [Flask-Restful 0.3.6](https://flask-restful.readthedocs.io/en/latest/)
