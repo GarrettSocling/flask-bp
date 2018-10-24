@@ -14,7 +14,7 @@ database:
   # specify the password for the database
   password: password
   # specify the database name here
-  database_name: flask-bp-db
+  database_name: flask-bp
 
 # development server configuration
 dev-server:

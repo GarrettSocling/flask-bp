@@ -4,7 +4,7 @@ User model for user table in database.
 from app import db
 
 
-class User(db.model):
+class User(db.Model):
     """Class for maintaining user table in the database."""
     __table_name__ = 'user'
 

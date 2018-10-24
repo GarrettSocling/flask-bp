@@ -5,4 +5,4 @@ from flask_sqlalchemy import declarative_base
 
 __all__ = ['user']
 
-from ..models import *
+from app.database.models import *
