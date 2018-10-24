@@ -1,7 +1,7 @@
 """
 Top level module of the flask-bp app.
 """
-from datetime import  datetime
+from datetime import datetime
 from flask import Flask
 from flask_cors import CORS
 
