@@ -6,9 +6,10 @@ import json
 from flask import Response
 from flask_restful import Resource
 from app.api.v1.schemas import CommonResponse
+from flask_apispec import marshal_with, MethodResource, doc, use_kwargs
 
 
-class BaseRoutes(Resource):
+class BaseRoutes(MethodResource):
     """Base Routes Handlers class."""
 
     # noinspection PyMethodMayBeStatic

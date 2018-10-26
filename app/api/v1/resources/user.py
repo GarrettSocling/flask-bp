@@ -8,22 +8,30 @@ from flask import Response, request
 from flask_restful import Resource
 
 from app.database.models.user import User
-from app.api.v1.schemas.users import UserArgs, UserResponse
+from app.api.v1.schemas.users import UserArgs, UserResponse, GetUserArgs, SuccessResponse
+from flask_apispec import marshal_with, doc, MethodResource, use_kwargs
 
 
-class Users(Resource):
+class Users(MethodResource):
     """Class for handling user resources."""
 
-    def get(self):
+    @doc(description='To get user info from database', tags=['Users'])
+    @marshal_with(UserResponse, code=200, description='user info found (success)')
+    @use_kwargs(GetUserArgs().fields_dict, locations=['query'])
+    def get(self, **kwargs):
         """GET method handler."""
-        user_id = request.args.get('user_id')
+        user_id = kwargs.get('user_id')
         user = User()
         return Response(json.dumps(UserResponse().dump(user.get(user_id)).data),
                         status=200, mimetype='application/json')
 
-    def post(self):
+    @doc(description='To add a user into the database', tags=['Users'])
+    @marshal_with(UserResponse, code=200, description='On success')
+    @marshal_with(SuccessResponse, code=500, description='On error')
+    @use_kwargs(UserArgs().fields_dict, locations=['json'])
+    def post(self, **kwargs):
         """POST method handler."""
-        user_data = json.loads(request.data.decode('utf-8'))
+        user_data = kwargs
         try:
             user = User(full_name=user_data.get('full_name'),
                         user_name=user_data.get('user_name'),

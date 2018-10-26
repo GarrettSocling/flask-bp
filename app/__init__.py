@@ -46,3 +46,6 @@ db = SQLAlchemy(session_options={'autocommit': False})
 db.init_app(app)
 # import all the defined routes here
 from app.api.v1 import *
+
+# call register docs
+register_routes_in_swagger()
