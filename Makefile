@@ -1,5 +1,5 @@
 
-.PHONY: clean-pyc dist install-db start-dev
+.PHONY: clean-pyc dist install-db start-dev test
 
 clean: clean-pyc
 	rm	-rf dist .cache migrations drs.egg-info
@@ -22,3 +22,7 @@ install-db:
 upgrade-db:
 	python3 manage.py db migrate
 	python3 manage.py db upgrade
+
+test:
+	pip3 install pytest==3.9.2
+	py.test --verbose
