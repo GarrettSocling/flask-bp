@@ -73,6 +73,11 @@ To clean .pyc files
 make clean-pyc
 ```
 
+To run the tests
+```bash
+make test
+```
+
 ## Open Source Resources Used
 1. [Python 3.7](https://www.python.org/downloads/release/python-370/)
 2. [Flask 1.0.2](https://github.com/pallets/flask)
