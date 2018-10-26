@@ -25,7 +25,7 @@ pip install -r requirements.txt
 ```
 Run the flask-bp:
 ```bash
-python run.py
+make start-dev
 ```
 
 ### Accessing flask-bp resources
@@ -54,15 +54,23 @@ http://localhost:5000/apidocs-json/
 ### Database Migrations
 To initialize  database migrations
 ```bash
-python manage.py db init
+make install-db
 ```
-To migrate the database
+
+To upgrade database schema
 ```bash
-python manage.py db migrate
+make upgrade-db
 ```
-To upgrade the database
+
+### Others
+To clean project
 ```bash
-python manage.py db upgrade
+make clean
+```
+
+To clean .pyc files
+```bash
+make clean-pyc
 ```
 
 ## Open Source Resources Used
