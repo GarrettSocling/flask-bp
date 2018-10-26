@@ -28,6 +28,29 @@ Run the flask-bp:
 python run.py
 ```
 
+### Accessing flask-bp resources
+To access the api server, you can access it on:
+```bash
+http://localhost:5000/api/v1/
+```
+There is one route defined which accepts a user information and return it back,
+it can be accessed:
+```bash
+http://localhost:5000/api/v1/user
+```
+It supports GET & POST method, GET for getting the user information from the database and
+POST to insert new user information to the database.
+
+To access the auto generated swagger documentations:
+```bash
+http://localhost:5000/apidocs/
+```
+
+To export swagger docs in json format:
+```bash
+http://localhost:5000/apidocs-json/
+```
+
 ### Database Migrations
 To initialize  database migrations
 ```bash
