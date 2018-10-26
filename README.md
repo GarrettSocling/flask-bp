@@ -3,6 +3,16 @@
 common aspects of the projects such as Database migrations, resourceful routing, unit-testing
 and many more.
 
+**[flask-restful](https://flask-restful.readthedocs.io/en/latest/)** has been used for resourceful routing in api server.
+**[Flask-cors](https://github.com/corydolphin/flask-cors)** has been used to manage the Cross-Origin Resource sharing.
+**[Marshmallow Python](https://github.com/marshmallow-code/marshmallow)** has been used for data management in api 
+requests and responses.
+**[Flask SQLAlchemy](https://github.com/mitsuhiko/flask-sqlalchemy)** has been used for database modeling.
+**[Flask Script 2.0.6 (deprecated)](https://github.com/smurfix/flask-script) & 
+[Flask Migrate 2.3.0](https://github.com/miguelgrinberg/Flask-Migrate)** has been used for database migrations.
+**[apispec 0.39.0](https://github.com/marshmallow-code/apispec) &
+[flask-apispec 0.7.0](https://github.com/jmcarp/flask-apispec)** has been used for auto swagger documentation of the apis.
+
 ## Setup
 A virtual environment should be used, e.g
 ```bash
@@ -42,3 +52,5 @@ python manage.py db upgrade
 7. [PyYAML 3.13](https://github.com/yaml/pyyaml)
 8. [Flask Script 2.0.6 (deprecated)](https://github.com/smurfix/flask-script)
 9. [Flask Migrate 2.3.0](https://github.com/miguelgrinberg/Flask-Migrate)
+10. [apispec 0.39.0](https://github.com/marshmallow-code/apispec)
+11. [flask-apispec 0.7.0](https://github.com/jmcarp/flask-apispec)
