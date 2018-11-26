@@ -18,8 +18,6 @@ def app():
     app_.config['SQLALCHEMY_DATABASE_URI'] = postgresql.url()
     yield app_
 
-    app_.testing = False
-    app_.debug = True
     postgresql.stop()
 
 

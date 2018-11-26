@@ -108,3 +108,6 @@ venv.bak/
 
 # sqlalchemy migrations tracks
 migrations/
+
+# cov reports
+flask_bp_test_report.xml
