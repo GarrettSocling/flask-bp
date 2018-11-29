@@ -29,3 +29,7 @@ upgrade-db:
 test:
 	pip3 install pytest==3.9.2
 	py.test --verbose
+
+lint:
+	pip3 install pylint
+	pylint --verbose app/* tests/* manage.py

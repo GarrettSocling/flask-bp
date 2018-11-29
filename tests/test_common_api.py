@@ -1,7 +1,11 @@
+"""
+Common api tests
+"""
 import json
 
 
 def test_common_api(flask_app):
+    """Verify that the api responds correctly."""
     expected_response = {'message': 'flask-bp API Version 1.0',
                          'method': 'GET',
                          'route_path': 'api/v1/'}

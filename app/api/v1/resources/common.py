@@ -4,9 +4,9 @@ Module for common resources.
 import json
 
 from flask import Response
-from flask_restful import Resource
+from flask_apispec import MethodResource
+
 from app.api.v1.schemas import CommonResponse
-from flask_apispec import marshal_with, MethodResource, doc, use_kwargs
 
 
 class BaseRoutes(MethodResource):

@@ -2,9 +2,9 @@
 Top level module of the flask-bp app.
 """
 import sys
+from datetime import datetime
 import yaml
 
-from datetime import datetime
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
@@ -23,7 +23,7 @@ CORS(app)
 # load the configuration file
 try:
     app_config = yaml.safe_load(open('etc/config.yml'))
-except Exception as e:  # exceptions can be specific to the possible errors
+except yaml.YAMLError as e:  # exceptions can be specific to the possible errors
     app.logger.error('exception encountered while parsing the configuration file, check the logs')
     app.logger.exception(e)
     sys.exit(1)
@@ -45,7 +45,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(session_options={'autocommit': False})
 db.init_app(app)
 # import all the defined routes here
-from app.api.v1 import *
+from app.api.v1 import *  # pylint: disable=wrong-import-position
 
 # call register docs
 register_routes_in_swagger()

@@ -4,7 +4,6 @@ flask-bp module to manage database migrations.
 from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
 
-from app.database.models import *
 from app import app, db
 
 migrate = Migrate(app, db)
