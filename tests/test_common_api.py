@@ -1,5 +1,4 @@
 import json
-from tests._fixtures import *
 
 
 def test_common_api(flask_app):

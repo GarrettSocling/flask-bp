@@ -26,6 +26,8 @@ pip install -r requirements.txt
 Run the flask-bp:
 ```bash
 make start-dev
+OR
+flask run -h 0.0.0.0
 ```
 
 ### Accessing flask-bp resources
