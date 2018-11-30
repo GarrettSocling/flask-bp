@@ -20,6 +20,7 @@ localhost:5000/apidocs-json
 Automated unit testing base is configured using [pytest](https://docs.pytest.org/en/latest/) with automatic
 coverage report.
 ![Pytest](/etc/images/pytest.gif)
+
 Tests can be engaged using:
 ```bash
 make test
@@ -28,6 +29,7 @@ make test
 ### 3. Automated Code Linter
 Automated code linting is supported using [Pylint](https://www.pylint.org/)
 ![Pylint](/etc/images/pylint.gif)
+
 Linter can be engaged using:
 ```bash
 make lint
