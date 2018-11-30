@@ -1,3 +1,7 @@
+[![codecov](https://codecov.io/gh/a-wakeel/flask-bp/branch/master/graph/badge.svg)](https://codecov.io/gh/a-wakeel/flask-bp)
+
+
+
 # flask-bp
 **flask-bp** is a comprehensive flask boilerplate for prototyping. It includes most
 common aspects of the projects such as Database migrations, resourceful routing, unit-testing
